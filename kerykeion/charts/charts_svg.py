@@ -1236,7 +1236,7 @@ class MakeSvgInstance:
                     # planet text
                     out += f'<text text-anchor="end" style="fill:{self.colors_settings["paper_0"]}; font-size: 10px;">{self.language_settings["planets"][self.planets_settings[i]["label"]]}</text>'
                     # planet symbol
-                    out += f'<g transform="translate(5,-8)"><use transform="scale(0.4)" xlink:href="#{self.planets_settings[i]["name"]}" /></g>'
+                    out += f'<g transform="translate(5,-8)"><use transform="scale(0.4)" xlink:href="# {self.planets_settings[i]["name"]}" /></g>'
                     # planet degree
                     out += '<text text-anchor="start" x="19" style="fill:%s; font-size: 10px;">%s</text>' % (
                         self.colors_settings['paper_0'], self.__dec2deg(self.t_planets_degree[i]))
@@ -1521,6 +1521,7 @@ class MakeSvgInstance:
         td['paper_color_0'] = self.colors_settings["paper_0"]
         td['paper_color_1'] = self.colors_settings["paper_1"]
 
+        import pdb; pdb.set_trace()         # debug stop breakpoint
         # planets_color_X
         for i in range(len(self.planets_settings)):
             td['planets_color_%s' %

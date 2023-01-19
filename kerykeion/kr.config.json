@@ -38,9 +38,8 @@
         "Dsc": "Dsc",
         "Ic": "Ic",
         "North_Node": "North Node",
-        "Mean_Node": "Mean Node"
-      }
-    },
+        "Mean_Node": "Mean Node",
+        "Chiron": "Chiron"
 
     "FR": {
       "info": "Informations",
@@ -80,7 +79,8 @@
         "Dsc": "Dsc",
         "Ic": "Ic",
         "North_Node": "Noeud Nord",
-        "Mean_Node": "Noeud Moyen"
+        "Mean_Node": "Noeud Moyen",
+        "Chiron": "Chiron"
       }
     },
 
@@ -122,7 +122,8 @@
         "Dsc": "Dsc",
         "Ic": "Ic",
         "North_Node": "Nodo Norte",
-        "Mean_Node": "Nodo Médio"
+        "Mean_Node": "Nodo Médio",
+        "Chiron": "Chiron"
       }
     },
 
@@ -164,9 +165,55 @@
         "Dsc": "Dsc",
         "Ic": "Ic",
         "North_Node": "Nodo Nord",
-        "Mean_Node": "Mean Node"
+        "Mean_Node": "Mean Node",
+        "Chiron": "Chiron"
+      }
+    },
+
+    "ES": {
+      "info": "Info",
+      "cusp": "Casa",
+      "longitude": "Longitud",
+      "latitude": "Latitud",
+      "north": "Norte",
+      "east": "Este",
+      "south": "Sur",
+      "west": "Oeste",
+      "fire": "Fuego",
+      "earth": "Tierra",
+      "air": "Aire",
+      "water": "Agua",
+      "&": "y",
+      "transits": "Transito por",
+      "type": "Tipo",
+      "aspects": "Aspectos",
+      "planets_and_house": "Planetas y casas de",
+      "transit_name": "Qui ed ora",
+      "lunar_phase": "Fase lunar",
+      "day": "Dia",
+
+      "planets": {
+        "Sun": "Sol",
+        "Moon": "Luna",
+        "Mercury": "Mercurio",
+        "Venus": "Venus",
+        "Mars": "Marte",
+        "Jupiter": "Jupiter",
+        "Saturn": "Saturno",
+        "Uranus": "Urano",
+        "Neptune": "Neptuno",
+        "Pluto": "Pluton",
+        "Asc": "Asc",
+        "Mc": "Mc",
+        "Dsc": "Dsc",
+        "Ic": "Ic",
+        "North_Node": "Nodo Norte",
+        "Mean_Node": "Mean Node",
+        "Chiron": "Quiron"
       }
     }
+
+
   },
 
   "colors": {

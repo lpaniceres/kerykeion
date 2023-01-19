@@ -68,7 +68,8 @@ Planet = Literal[
     "Neptune",
     "Pluto",
     "Mean_Node",
-    "True_Node"
+    "True_Node",
+    "Chiron"
 ]
 
 Element = Literal[
@@ -191,6 +192,7 @@ class KerykeionSubject(BaseModel):
     uranus: KerykeionPoint
     neptune: KerykeionPoint
     pluto: KerykeionPoint
+    chiron: KerykeionPoint
 
     # Houses
     first_house: KerykeionPoint

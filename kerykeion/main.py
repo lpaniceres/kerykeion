@@ -277,6 +277,7 @@ class KrInstance():
         pluto_deg = swe.calc(self.julian_day, 9, self.__iflag)[0][0]
         mean_node_deg = swe.calc(self.julian_day, 10, self.__iflag)[0][0]
         true_node_deg = swe.calc(self.julian_day, 11, self.__iflag)[0][0]
+        chiron_deg = swe.calc(self.julian_day, 12, self.__iflag)[0][0]
 
         # print(swe.calc(self.julian_day, 7, self.__iflag)[3])
 
@@ -292,7 +293,8 @@ class KrInstance():
             neptune_deg,
             pluto_deg,
             mean_node_deg,
-            true_node_deg
+            true_node_deg,
+            chiron_deg
         ]
 
         return self.planets_degrees
@@ -338,6 +340,9 @@ class KrInstance():
         )
         self.true_node = calculate_position(
             self.planets_degrees[11], "True_Node", point_type=point_type
+        )
+        self.chiron = calculate_position(
+            self.planets_degrees[11], "Chiron", point_type=point_type
         )
 
     def __planets_in_houses(self):
@@ -437,6 +442,10 @@ class KrInstance():
         self.true_node = for_every_planet(
             self.true_node, self.planets_degrees[11]
         )
+        self.chiron = for_every_planet(
+            self.chiron, self.planets_degrees[12]
+        )
+
 
         planets_list = [
             self.sun,
@@ -450,7 +459,8 @@ class KrInstance():
             self.neptune,
             self.pluto,
             self.mean_node,
-            self.true_node
+            self.true_node,
+            self.chiron
         ]
 
         # Check in retrograde or not:
@@ -536,7 +546,7 @@ class KrInstance():
         """ Internal function to generate the lists"""
         self.planets_list = [self.sun, self.moon, self.mercury, self.venus,
                              self.mars, self.jupiter, self.saturn, self.uranus, self.neptune,
-                             self.pluto, self.mean_node, self.true_node]
+                             self.pluto, self.mean_node, self.true_node, self.chiron]
 
         self.houses_list = [self.first_house, self.second_house, self.third_house,
                             self.fourth_house, self.fifth_house, self.sixth_house, self.seventh_house,
