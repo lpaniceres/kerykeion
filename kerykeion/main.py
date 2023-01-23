@@ -277,7 +277,29 @@ class KrInstance():
         pluto_deg = swe.calc(self.julian_day, 9, self.__iflag)[0][0]
         mean_node_deg = swe.calc(self.julian_day, 10, self.__iflag)[0][0]
         true_node_deg = swe.calc(self.julian_day, 11, self.__iflag)[0][0]
-        chiron_deg = swe.calc(self.julian_day, 12, self.__iflag)[0][0]
+        chiron_deg = swe.calc(self.julian_day, 15, self.__iflag)[0][0]
+# from swiss ephemeris constants
+ # Const SE_SUN As Integer = 0
+ # Const SE_MOON As Integer = 1
+ # Const SE_MERCURY As Integer = 2
+ # Const SE_VENUS As Integer = 3
+ # Const SE_MARS As Integer = 4
+ # Const SE_JUPITER As Integer = 5
+ # Const SE_SATURN As Integer = 6
+ # Const SE_URANUS As Integer = 7
+ # Const SE_NEPTUNE As Integer = 8
+ # Const SE_PLUTO   As Integer = 9
+ # Const SE_MEAN_NODE As Integer = 10
+ # Const SE_TRUE_NODE As Integer = 11
+ # Const SE_MEAN_APOG As Integer = 12
+ # Const SE_OSCU_APOG As Integer = 13
+ # Const SE_EARTH     As Integer = 14
+ # Const SE_CHIRON    As Integer = 15
+ # Const SE_PHOLUS    As Integer = 16
+ # Const SE_CERES     As Integer = 17
+ # Const SE_PALLAS    As Integer = 18
+ # Const SE_JUNO      As Integer = 19
+ # Const SE_VESTA     As Integer = 20
 
         # print(swe.calc(self.julian_day, 7, self.__iflag)[3])
 
@@ -342,7 +364,7 @@ class KrInstance():
             self.planets_degrees[11], "True_Node", point_type=point_type
         )
         self.chiron = calculate_position(
-            self.planets_degrees[11], "Chiron", point_type=point_type
+            self.planets_degrees[12], "Chiron", point_type=point_type
         )
 
     def __planets_in_houses(self):
